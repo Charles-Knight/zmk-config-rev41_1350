@@ -14,7 +14,7 @@
 #define RAISE   2
 #define MEDIA   3
 #define RADIO   4
-#define GAMES   6
+#define GAMES   5
 
 / {
     behaviors {
@@ -94,9 +94,9 @@
 
                 default_layer {
                        bindings = <
-                                &kp EQUAL &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U &kp I     &kp O   &kp P    &kp BSPC
-                                &kp MINUS &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
-                                &kp LBKT  &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RBKT
+                                &kp EQUAL &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U       &kp I     &kp O   &kp P    &kp BSPC
+                                &kp MINUS &kp A &kp S &kp D &kp F &kp G         &kp H &kp J       &kp K     &kp L   &kp SEMI &kp SQT
+                                &kp LBKT  &kp Z &kp X &kp C &kp V &lt RADIO B   &kp N &lt MEDIA M &kp COMMA &kp DOT &kp FSLH &lt RAISE RBKT
                                                 &kp LCTRL &kp LSHFT &lt LOWER SPACE &kp LGUI &mt LALT GRAVE
                         >;
                 };

@@ -87,12 +87,6 @@
                         bindings = <&kp CAPSLOCK>;
                         layers = <BASE LOWER >;
                 };
-
-                combo_game_layer {
-                        timeout-ms = <50>;
-                        key-positions = <11 35>;
-                        bindings = <&tog GAMES>;
-                };
         };
 
         keymap {
@@ -151,8 +145,6 @@
                                 &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M &kp COMMA &kp PERIOD &kp BACKSLASH &kp ENTER
                                                   &kp LALT &kp LCTRL &kp SPACE &kp LGUI &tog GAME_L
                         >;
-        };
-
-
+                };
         };
 };

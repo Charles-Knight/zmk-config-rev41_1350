@@ -16,6 +16,8 @@
 #define GAMES   5
 
 / {
+        // Todo: New Behaviors
+        //       double tap space to do period, space, one-shot shift
         behaviors {
                 hm: homerow_mods {
                         compatible = "zmk,behavior-hold-tap";
@@ -32,6 +34,15 @@
                         label = "BACKSPACE_DELETE";
                         #binding-cells = <0>;
                         bindings = <&kp BACKSPACE>, <&kp DELETE>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                        keep-mods = <(MOD_RSFT)>;
+                };
+
+                space_backspace_with_lt: space_backspace_with_lt {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "SPACE_BACKSPACE";
+                        #binding-cells = <0>;
+                        bindings = <&lt LOWER SPACE>, <&lt LOWER BACKSPACE>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                         keep-mods = <(MOD_RSFT)>;
                 };
@@ -93,7 +104,6 @@
                 compatible = "zmk,keymap";
                 
                 // TODO: Change space to mod morph so that shift + space is backspace?
-                // Also consider other modmorph options: GUI + Space = enter? ALT + Space = Tab
                 default_layer {
                        bindings = <
                                 &kp EQUAL      &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U       &kp I     &kp O   &kp P    &kp BSLH
@@ -105,9 +115,9 @@
 
                 lower_layer {
                         bindings = <
-                                &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &none
-                                &none &none  &none  &none  &none  &none    &kp LEFT &kp DOWN &kp UP &kp RIGHT &none  &none
-                                &none &none  &none  &none  &none  &none    &none    &none    &none  &none     &none  &none
+                                &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6   &kp N7        &kp N8      &kp N9    &kp N0 &none
+                                &none &none  &none  &none  &none  &none    &kp LEFT &kp DOWN      &kp UP      &kp RIGHT &none  &none
+                                &none &none  &none  &none  &none  &none    &kp HOME &kp PAGE_DOWN &kp PAGE_UP &kp END   &none  &none
                                                         &trans    &trans    &trans    &trans    &trans
                         >;
                 };

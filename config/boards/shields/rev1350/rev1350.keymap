@@ -38,15 +38,6 @@
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                         keep-mods = <(MOD_RSFT)>;
                 };
-
-                space_backspace_with_lt: space_backspace_with_lt {
-                        compatible = "zmk,behavior-mod-morph";
-                        label = "SPACE_BACKSPACE";
-                        #binding-cells = <0>;
-                        bindings = <&lt LOWER SPACE>, <&lt LOWER BACKSPACE>;
-                        mods = <(MOD_LSFT|MOD_RSFT)>;
-                        keep-mods = <(MOD_RSFT)>;
-                };
         };
 
         combos {

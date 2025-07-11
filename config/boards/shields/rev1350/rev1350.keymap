@@ -99,7 +99,7 @@
                                 &kp EQUAL &kp Q &kp W       &kp E      &kp R      &kp T   &kp Y &kp U       &kp I      &kp O       &kp P    &kp BSLH
                                 &kp MINUS &kp A &hm LCTRL S &hm LALT D &hm LGUI F &kp G   &kp H &hm RGUI J  &hm RALT K &hm RCTRL L &kp SEMI &kp SQT
                                 &kp LBKT  &kp Z &kp X       &kp C      &kp V      &kp B   &kp N &kp M       &kp COMMA  &kp DOT     &kp FSLH &kp RBKT
-                                                         &lt MEDIA TAB &kp LSHFT &lt LOWER SPACE &bspc_del &kp GRAVE
+                                                         &lt MEDIA LPAR &kp LSHFT &kp GRAVE &lt LOWER SPACE &kp RPAR
                         >;
                 };
 
